@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Айзере — Сырға салу, Құдалық</title>
+  <meta name="description" content="Айзере қызымыздың сырға салу рәсімі мен құдалық тойына шақыру — 22.11.2026">
+  <meta property="og:title" content="Айзере — Сырға салу, Құдалық">
+  <meta property="og:description" content="22 Қараша 2026, сағат 12:00 · Жаркент, «Қуаныш Гранд Холл»">
+  <meta property="og:image" content="assets/img/sholpy-1.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <style>
+    @font-face{font-family:'Asylbek Shelley';font-display:swap;src:url('assets/fonts/asylbek-shelley.woff2') format('woff2')}
+    @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url('assets/fonts/cormorant-normal-cyrillic-ext.woff2') format('woff2')}
+    @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url('assets/fonts/cormorant-italic-cyrillic-ext.woff2') format('woff2')}
+    @font-face{font-family:'KZ Monumenta Pro';font-display:swap;src:url('assets/fonts/KZPFMonumentaPro-Regular.woff2') format('woff2')}
+
+    :root{
+      --paper-solid:#faf9f5;
+      --paper:
+        radial-gradient(circle at 4px 9px,rgba(75,75,74,.11) 0 .8px,transparent .9px),
+        radial-gradient(circle at 26px 12px,rgba(75,75,74,.09) 0 .65px,transparent .75px),
+        radial-gradient(circle at 19px 36px,rgba(75,75,74,.08) 0 .7px,transparent .8px),
+        #faf9f5;
+      --ink:#4a4038;
+      --ink-soft:#6e6257;
+      --ink-mute:#9a8c7e;
+      --rule:rgba(74,64,56,.25);
+      --accent:#8b8b72;
+      --primary:#83836b;
+      --primary-ink:#faf9f5;
+      --font-display:'Asylbek Shelley','Cormorant Garamond',serif;
+      --font-body:'Times New Roman','Cormorant Garamond',serif;
+      --font-mono:'KZ Monumenta Pro','Cormorant Garamond',Georgia,serif;
+      --type-scale:1.4;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;background:#f1ece2}
+    body{width:100%;min-height:100vh;background:#f1ece2;color:var(--ink);font-family:var(--font-body)}
+    .page{width:100%;max-width:430px;min-height:100vh;margin:0 auto;overflow:hidden;background:var(--paper);background-size:48px 48px;box-shadow:0 0 60px rgba(42,37,32,.18)}
+    img{display:block;max-width:100%}
+
+    .hero{position:relative;width:100%;background:var(--paper);background-size:48px 48px}
+    .hero-media{position:relative;width:100%;aspect-ratio:941/1256;overflow:hidden;isolation:isolate}
+    .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+    .hero-copy{text-align:center;padding:18px 24px 16px;position:relative;z-index:3}
+    .hero-name{font-family:var(--font-display);font-size:calc(var(--type-scale)*64px);line-height:1.15;color:var(--ink);font-weight:400}
+    .hero-kind{margin-top:14px;font-family:var(--font-mono);font-size:calc(var(--type-scale)*17px);letter-spacing:.32em;text-indent:.32em;color:var(--ink-soft);text-transform:uppercase}
+    .hero-date{margin-top:18px;font-family:var(--font-mono);font-size:calc(var(--type-scale)*12px);letter-spacing:.3em;color:var(--ink-mute)}
+
+    .decor-zero{position:relative;height:0;z-index:4;pointer-events:none}
+    .decor-zero img{position:absolute;height:auto;opacity:.75}
+    .flower-one-left{left:-14px;top:-150px;width:118px}
+    .flower-one-right{right:-14px;top:-268px;width:112px;transform:scaleX(-1)}
+    .flower-two-right{right:-14px;top:-60px;width:132px;transform:scaleX(-1)}
+    .flower-two-left-high{left:-14px;top:26px;width:120px}
+    .flower-two-left-low{left:-14px;top:40px;width:124px}
+    .flower-one-countdown{right:-14px;top:30px;width:110px;transform:scaleX(-1)}
+    .ornament-divider{display:flex;justify-content:center;padding:12px 0;background:var(--paper);background-size:48px 48px;position:relative;z-index:2}
+    .ornament-divider img{width:92px;height:auto;opacity:.55}
+    .ornament-divider.is-small img{width:72px}
+    .rosette-divider{display:flex;justify-content:center;padding:12px 0;background:var(--paper);background-size:48px 48px;position:relative;z-index:2}
+    .rosette-divider img{width:168px;height:auto;opacity:.55;animation:rosette-drift 12s ease-in-out infinite}
+    @keyframes rosette-drift{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+
+    .invite{position:relative;padding:56px 28px 40px;text-align:center;background:transparent}
+    .invite-greeting{font-family:var(--font-display);font-size:calc(var(--type-scale)*30px);line-height:1.1;color:var(--accent);margin-bottom:24px;white-space:pre-line}
+    .invite-body{font-family:var(--font-body);font-size:calc(var(--type-scale)*14.5px);line-height:1.7;color:var(--ink-soft);max-width:320px;margin:0 auto 28px;white-space:pre-line;text-transform:uppercase}
+    .invite-date{font-family:var(--font-display);font-size:calc(var(--type-scale)*29px);color:var(--ink);letter-spacing:.02em;margin-bottom:24px}
+    .cal{display:grid;grid-template-columns:repeat(7,1fr);row-gap:14px;column-gap:6px;font-family:var(--font-body);color:var(--ink-soft)}
+    .cal-wd{font-family:var(--font-mono);font-size:calc(var(--type-scale)*11px);letter-spacing:.18em;text-align:center;color:var(--ink-mute);padding-bottom:8px;border-bottom:1px solid var(--rule)}
+    .cal-day{position:relative;text-align:center;font-family:var(--font-display);font-size:calc(var(--type-scale)*16px);line-height:32px;color:var(--ink-soft)}
+    .cal-day.is-event{color:var(--accent)}
+    .cal-event-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px}
+    .cal-event-wrap svg{position:absolute;inset:0;stroke:var(--accent);fill:none;stroke-width:1.4}
+    .cal-event-wrap span{position:relative}
+    .invite-time{margin-top:32px;font-family:var(--font-display);font-size:calc(var(--type-scale)*28px);color:var(--ink);letter-spacing:.18em}
+
+    .location{position:relative;padding:48px 24px 40px;background:transparent}
+    .section-heading{text-align:center;padding:0 24px}
+    .section-title{font-family:var(--font-display);letter-spacing:.32em;font-size:calc(var(--type-scale)*26px);color:var(--ink)}
+    .section-sub{font-family:var(--font-body);font-style:italic;font-size:calc(var(--type-scale)*16px);color:var(--ink-mute);margin-top:8px}
+    .loc-addr{margin-top:18px;text-align:center;font-family:var(--font-body);font-size:calc(var(--type-scale)*19px);color:var(--ink-soft);line-height:1.7}
+    .loc-addr .accent-italic{font-style:italic}
+    .map-btn,.music-btn{display:none}
+
+    .countdown-section{position:relative;padding:48px 24px 64px;background:transparent;text-align:center}
+    .countdown-title{font-family:var(--font-display);font-size:calc(var(--type-scale)*22px);letter-spacing:.32em;color:var(--ink);margin-bottom:22px}
+    .count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+    .count-num{font-family:var(--font-display);font-size:calc(var(--type-scale)*44px);line-height:1;color:var(--ink)}
+    .count-lbl{font-family:var(--font-body);font-size:calc(var(--type-scale)*12px);color:var(--ink-mute);margin-top:6px;font-style:italic}
+    .countdown-note{margin-top:22px;font-family:var(--font-body);font-style:italic;font-size:calc(var(--type-scale)*14px);color:var(--ink-soft);line-height:1.6;white-space:pre-line}
+    .hosts{text-align:center;margin-top:56px}
+    .hosts-label,.hosts-name{font-family:var(--font-display);font-size:calc(var(--type-scale)*23px);letter-spacing:.18em;color:var(--ink)}
+    .hosts-name{margin-top:4px}
+    .hosts-note{margin-top:14px;font-family:var(--font-body);font-style:italic;font-size:calc(var(--type-scale)*14px);color:var(--ink-soft)}
+
+    .rsvp-wrap{margin:40px auto 0;max-width:380px;padding:8px 0;text-align:left}
+    .rsvp-form{max-width:320px;margin:0 auto;font-family:'Cormorant Garamond',Georgia,serif}
+    .rsvp-title{text-align:center;margin-bottom:22px;font-family:var(--font-display);font-size:calc(var(--type-scale)*48px);font-weight:400;line-height:1.15;color:var(--ink)}
+    .field-label,.attend-label{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:calc(var(--type-scale)*22px);color:var(--ink)}
+    .field-label{display:block;margin-bottom:4px}.attend-label{margin:20px 0 10px}
+    .rsvp-input{width:100%;padding:12px 18px;margin-bottom:4px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:calc(var(--type-scale)*20px);outline:none;border-radius:999px}
+    .rsvp-input::placeholder{color:var(--ink-mute);opacity:.65}
+    .phone-field,.note-wrap{margin-top:14px}
+    .rsvp-note{width:100%;min-height:80px;padding:12px 18px;border:1.5px solid var(--ink);border-radius:18px;background:transparent;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:calc(var(--type-scale)*18px);outline:none;resize:vertical;box-sizing:border-box}
+    .attend-list{display:flex;flex-direction:column;gap:8px}
+    .attend-opt{position:relative;display:flex;align-items:center;gap:12px;width:100%;padding:7px 2px;border:0;background:transparent;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:calc(var(--type-scale)*22px);cursor:pointer;text-align:left;opacity:.75}
+    .attend-opt:has(input:checked){opacity:1}.attend-opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+    .attend-dot{width:14px;height:14px;border-radius:50%;border:1px solid var(--ink-mute);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .attend-dot::after{content:'';width:7px;height:7px;border-radius:50%;background:transparent}.attend-opt:has(input:checked) .attend-dot::after{background:var(--accent)}
+    .submit-btn{display:block;width:auto;margin:24px auto 0;padding:13px 40px;border:0;border-radius:999px;background:var(--primary);color:var(--primary-ink);font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:.22em;font-size:calc(var(--type-scale)*14px);cursor:pointer}
+    .success-msg{display:none;text-align:center;padding:18px 6px 0;font-family:var(--font-body);font-style:italic;font-size:calc(var(--type-scale)*18px);color:var(--accent)}
+
+    .wishes{position:relative;padding:40px 24px 48px;text-align:center;background:transparent}
+    .wishes-title{font-family:var(--font-display);font-size:calc(var(--type-scale)*26px);letter-spacing:.18em;color:var(--ink);margin-bottom:12px}
+    .wishes-text{font-family:var(--font-body);font-style:italic;font-size:calc(var(--type-scale)*14px);color:var(--ink-soft);line-height:1.7;max-width:340px;margin:0 auto 18px;white-space:pre-line}
+    .wishes-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;background:var(--primary);color:var(--primary-ink);border:0;font-family:var(--font-body);font-size:calc(var(--type-scale)*13px);letter-spacing:.06em;cursor:pointer}
+    .wish-form{max-width:340px;margin:16px auto 0;text-align:left}
+    .wish-input,.wish-note{display:block;width:100%;margin-bottom:10px;padding:10px 12px;border-radius:8px;border:1px solid var(--rule);background:rgba(250,249,245,.7);color:var(--ink);font-family:var(--font-body);font-size:16px;outline:none}
+    .wish-note{min-height:76px;resize:vertical}.wish-submit{display:block;width:100%;padding:12px 22px;border-radius:999px;border:0;background:var(--primary);color:var(--primary-ink);font-family:var(--font-body);font-size:15px;letter-spacing:.06em;cursor:pointer}
+    .footer{padding:20px 16px;text-align:center;background:transparent;border-top:1px solid var(--rule);font-family:var(--font-body);font-size:13px;letter-spacing:.04em;color:var(--ink-mute);line-height:1.4}
+
+    @media(max-width:360px){:root{--type-scale:1.28}.hero-name{font-size:calc(var(--type-scale)*59px)}}
+    @media(prefers-reduced-motion:reduce){.rosette-divider img{animation:none}}
+  
+    /* плавное появление блоков при прокрутке (как в оригинале) */
+    [data-reveal]{opacity:var(--ro,0);translate:0 30px;transition:opacity 760ms cubic-bezier(.22,1,.36,1),translate 760ms cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0ms)}
+    [data-reveal].is-visible{opacity:1;translate:0 0}
+    @media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1;translate:none;transition:none}}
+    .submit-btn:disabled,.wish-submit:disabled{opacity:.6;cursor:default}
+    .wish-success{display:none;text-align:center;padding:14px 6px 0;font-family:var(--font-body);font-style:italic;font-size:calc(var(--type-scale)*16px);color:var(--accent)}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-media" data-reveal><img class="hero-image" src="assets/img/sholpy-1.webp" alt="" aria-hidden="true"></div>
+      <div class="hero-copy" data-reveal style="--d:85ms">
+        <h1 class="hero-name">Айзере</h1>
+        <div class="hero-kind">Сырға САЛУ<br>ҚҰДАЛЫҚ</div>
+        <div class="hero-date">22 . 11 . 2026</div>
+      </div>
+    </section>
+
+    <div class="decor-zero" aria-hidden="true"><img class="flower-one-left" src="assets/img/sholpy-flower1.webp" alt=""><img class="flower-one-right" src="assets/img/sholpy-flower1.webp" alt=""></div>
+    <div class="ornament-divider" aria-hidden="true"><img src="assets/img/sholpy-horn.webp" alt=""></div>
+
+    <section class="invite">
+      <div class="invite-greeting" data-reveal>Құрметті қонақтар!</div>
+      <div class="invite-body" data-reveal style="--d:85ms">Сіздерді аЙЗЕРЕ қызымыздың СЫРҒА САЛУ РАСІМІ МЕН ҚҰДАЛЫҚ ТОЙЫНА арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</div>
+      <div class="invite-date" data-reveal style="--d:170ms">22 Қараша 2026</div>
+      <div class="cal" aria-hidden="true" data-reveal style="--d:255ms"><div class="cal-wd">дс</div><div class="cal-wd">сс</div><div class="cal-wd">ср</div><div class="cal-wd">бс</div><div class="cal-wd">жм</div><div class="cal-wd">сн</div><div class="cal-wd">жс</div><div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div><div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div><div class="cal-day">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day">12</div><div class="cal-day">13</div><div class="cal-day">14</div><div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day">19</div><div class="cal-day">20</div><div class="cal-day">21</div><div class="cal-day is-event"><span class="cal-event-wrap"><svg viewBox="0 0 36 32" width="36" height="32"><path d="M18 30 C 4 22, 2 12, 8 7 C 13 3, 18 8, 18 11 C 18 8, 23 3, 28 7 C 34 12, 32 22, 18 30 Z"></path></svg><span>22</span></span></div><div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div><div class="cal-day">28</div><div class="cal-day">29</div><div class="cal-day">30</div></div>
+      <div class="invite-time" data-reveal style="--d:340ms"><span>Сағат</span> <span>12:00</span></div>
+    </section>
+
+    <div class="decor-zero" aria-hidden="true"><img class="flower-two-right" src="assets/img/sholpy-flower2.webp" alt=""><img class="flower-two-left-high" src="assets/img/sholpy-flower2.webp" alt=""></div>
+    <div class="rosette-divider" aria-hidden="true"><img src="assets/img/sholpy-rosette.webp" alt=""></div>
+    <div class="decor-zero" aria-hidden="true"><img class="flower-two-left-low" src="assets/img/sholpy-flower2.webp" alt=""></div>
+
+    <section class="location">
+      <div class="section-heading" data-reveal><div class="section-title">Мекен-жай</div><div class="section-sub">Той орны</div></div>
+      <div class="loc-addr" data-reveal style="--d:85ms;font-size:22px !important;">Жаркент қаласы, <br>Жібек жолы даңғылы, 137А<br>«Қуаныш Гранд Холл» мейрамханасы<br>"Суан" залы</div>
+    </section>
+
+    <div class="ornament-divider" aria-hidden="true"><img src="assets/img/sholpy-horn.webp" alt=""></div>
+    <div class="decor-zero" aria-hidden="true"><img class="flower-one-countdown" src="assets/img/sholpy-flower1.webp" alt=""></div>
+
+    <section class="countdown-section">
+      <div class="countdown-title" data-reveal>Тойға дейін:</div>
+      <div class="count-grid" aria-live="polite" data-reveal style="--d:85ms">
+        <div><div class="count-num" id="cdDays">00</div><div class="count-lbl">күн</div></div>
+        <div><div class="count-num" id="cdHours">00</div><div class="count-lbl">сағат</div></div>
+        <div><div class="count-num" id="cdMinutes">00</div><div class="count-lbl">минут</div></div>
+        <div><div class="count-num" id="cdSeconds">00</div><div class="count-lbl">секунд</div></div>
+      </div>
+      <div class="countdown-note" data-reveal style="--d:170ms">Тойға келуіңізді растауыңызды<br>сұраймыз!</div>
+      <div class="hosts" data-reveal style="--d:255ms"><div class="hosts-label">Той иелері:</div><div class="hosts-name">Қайрат&amp; Ұлтай</div><div class="hosts-note">Сіздерді тойымызда күтеміз!</div></div>
+
+      <div class="rsvp-wrap" data-reveal style="--d:340ms">
+        <form class="rsvp-form" id="rsvpForm">
+          <div class="rsvp-title">Анкета</div>
+          <label class="field-label" for="rName">Аты-жөніңіз</label>
+          <input class="rsvp-input" id="rName" name="guest_name" type="text" autocomplete="name" placeholder="Аты-жөніңіз" required>
+          <div class="attend-label">Келесіз бе?</div>
+          <div class="attend-list">
+            <label class="attend-opt"><input type="radio" name="attendance" value="Иә, әрине" required><span class="attend-dot" aria-hidden="true"></span><span>Иә, әрине</span></label>
+            <label class="attend-opt"><input type="radio" name="attendance" value="Жұбайыммен келемін"><span class="attend-dot" aria-hidden="true"></span><span>Жұбайыммен келемін</span></label>
+            <label class="attend-opt"><input type="radio" name="attendance" value="Келе алмаймын"><span class="attend-dot" aria-hidden="true"></span><span>Келе алмаймын</span></label>
+          </div>
+          <button class="submit-btn" id="rsvpSubmitBtn" type="submit">Жіберу</button>
+        </form>
+        <div class="success-msg" id="successMsg">Рақмет! Жауабыңыз сақталды.</div>
+      </div>
+    </section>
+
+    <section class="wishes">
+      <div class="wishes-title" data-reveal>Тілектер</div>
+      <div class="wishes-text" data-reveal style="--d:85ms">Қызымызға ақ бата, жас жұбайларға жылы лебіз қалдырыңыз.</div>
+      <button class="wishes-btn" id="wishesBtn" type="button" data-reveal style="--d:170ms"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><polyline points="3 7 12 13 21 7"></polyline></svg><span>Тілек қалдыру</span></button>
+      <form class="wish-form" id="wishForm" data-reveal style="--d:255ms"><input class="wish-input" id="wishName" name="guest_name" maxlength="200" placeholder="Атыңыз" required><textarea class="wish-note" id="wishMessage" name="message" maxlength="2000" rows="3" placeholder="Тілегіңіз" required></textarea><button class="wish-submit" id="wishSubmitBtn" type="submit">Жіберу</button></form>
+      <div class="wish-success" id="wishSuccess">Рақмет! Тілегіңіз жіберілді.</div>
+    </section>
+
+    <div class="ornament-divider is-small" aria-hidden="true"><img src="assets/img/sholpy-horn.webp" alt=""></div>
+  </main>
+
+  <script>
+    /* =====================================================================
+       НАСТРОЙКА GOOGLE ТАБЛИЦЫ:
+       вставьте сюда ссылку веб-приложения Google Apps Script
+       (см. инструкцию в файле README.md). Пример:
+       var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfy.../exec";
+       ===================================================================== */
+    var GOOGLE_SCRIPT_URL = "";
+
+    /* Дата и время тойа (время Казахстана, UTC+5) */
+    var EVENT_DATE = new Date("2026-11-22T12:00:00+05:00");
+
+    // Обратный отсчёт
+    (function(){
+      var el = {d:document.getElementById('cdDays'),h:document.getElementById('cdHours'),m:document.getElementById('cdMinutes'),s:document.getElementById('cdSeconds')};
+      function pad(n){return n<10?'0'+n:''+n;}
+      function tick(){
+        var diff = Math.max(0, EVENT_DATE.getTime() - Date.now());
+        var t = Math.floor(diff/1000);
+        el.d.textContent = pad(Math.floor(t/86400));
+        el.h.textContent = pad(Math.floor(t%86400/3600));
+        el.m.textContent = pad(Math.floor(t%3600/60));
+        el.s.textContent = pad(t%60);
+      }
+      tick(); setInterval(tick, 1000);
+    })();
+
+    // Появление блоков при прокрутке
+    (function(){
+      var items = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) { items.forEach(function(e){e.classList.add('is-visible');}); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('is-visible'); io.unobserve(en.target); } });
+      }, {threshold:0.12, rootMargin:'0px 0px -5% 0px'});
+      items.forEach(function(e){ io.observe(e); });
+    })();
+
+    // Отправка данных в Google Таблицу
+    function sendToSheet(data){
+      if (!GOOGLE_SCRIPT_URL) {
+        console.warn('GOOGLE_SCRIPT_URL не указан — ответ не сохранён в таблицу', data);
+        return Promise.resolve();
+      }
+      var body = new URLSearchParams(data);
+      return fetch(GOOGLE_SCRIPT_URL, {method:'POST', mode:'no-cors', body: body});
+    }
+
+    // Анкета
+    document.getElementById('rsvpForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = this, btn = document.getElementById('rsvpSubmitBtn');
+      var att = form.querySelector('input[name="attendance"]:checked');
+      btn.disabled = true;
+      sendToSheet({
+        type: 'rsvp',
+        name: document.getElementById('rName').value.trim(),
+        attendance: att ? att.value : ''
+      }).then(function(){
+        form.style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      }).catch(function(){
+        btn.disabled = false;
+        alert('Қате орын алды. Қайталап көріңіз.');
+      });
+    });
+
+    // Тілектер
+    document.getElementById('wishesBtn').addEventListener('click', function(){
+      var f = document.getElementById('wishForm');
+      f.scrollIntoView({behavior:'smooth', block:'center'});
+      setTimeout(function(){ document.getElementById('wishName').focus({preventScroll:true}); }, 400);
+    });
+    document.getElementById('wishForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = this, btn = document.getElementById('wishSubmitBtn');
+      btn.disabled = true;
+      sendToSheet({
+        type: 'wish',
+        name: document.getElementById('wishName').value.trim(),
+        message: document.getElementById('wishMessage').value.trim()
+      }).then(function(){
+        form.reset(); btn.disabled = false;
+        var ok = document.getElementById('wishSuccess'); ok.style.display = 'block';
+        setTimeout(function(){ ok.style.display = 'none'; }, 5000);
+      }).catch(function(){
+        btn.disabled = false;
+        alert('Қате орын алды. Қайталап көріңіз.');
+      });
+    });
+  </script>
+</body>
+</html>
